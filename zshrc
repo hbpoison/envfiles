@@ -35,4 +35,4 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:$PATH
-export EDITOR=vim
+export EDITOR=/usr/local/bin/vim
