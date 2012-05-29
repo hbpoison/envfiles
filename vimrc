@@ -105,7 +105,7 @@ imap jj <ESC>
 nnoremap ; :
 
 " Map ,a to Ack
-"nnoremap <Leader>a :Ack
+nnoremap <Leader>a :Ack
 " Rotating among results in an ack search
 "map <C-n> :cn<cr>
 "map <C-p> :cp<cr>

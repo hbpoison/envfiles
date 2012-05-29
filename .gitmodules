@@ -79,9 +79,6 @@
 [submodule "vim/bundle/textile.vim"]
 	path = vim/bundle/textile.vim
 	url = https://github.com/timcharper/textile.vim.git
-[submodule "vim/bundle/tabular"]
-	path = vim/bundle/tabular
-	url = https://github.com/godlygeek/tabular.git
 [submodule "vim/bundle/vim-bundler"]
 	path = vim/bundle/vim-bundler
 	url = https://github.com/tpope/vim-bundler.git
