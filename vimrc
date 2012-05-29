@@ -110,9 +110,6 @@ nnoremap <Leader>a :Ack
 "map <C-n> :cn<cr>
 "map <C-p> :cp<cr>
 
-" Map ,co to TComment
-map <Leader>co :TComment<cr>
-
 " Splits ,v to new vertical split and switch to it
 nnoremap <Leader>v <C-w>v<C-w>l
 nnoremap <Leader>h :split<cr><C-w>j
@@ -143,27 +140,6 @@ set noswapfile
 
 " BLAAAME
 vmap <Leader>gb :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p<CR>
-
-" Tabularize
-"nmap <leader>a\| :Tab /\|<CR>
-"vmap <leader>a\| :Tab /\|<CR>
-"nmap <leader>a= :Tab /=<CR>
-"vmap <leader>a= :Tab /=<CR>
-"nmap <leader>a: :Tab /:\zs<CR>
-"vmap <leader>a: :Tab /:\zs<CR>
-
-inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
-
-function! s:align()
-  let p = '^\s*|\s.*\s|\s*$'
-  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
-    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
-    Tabularize/|/l1
-    normal! 0
-    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
-  endif
-endfunction
 
 " map to bufexplorer
 nnoremap <Leader>b :BufExplorer<cr>
