@@ -41,6 +41,3 @@ export EDITOR=/usr/local/bin/vim
 alias mongodb-up="mongod run --config /usr/local/etc/mongod.conf"
 alias redis-up="redis-server /usr/local/etc/redis.conf"
 
-# rbenv
-eval "$(rbenv init -)"
-
