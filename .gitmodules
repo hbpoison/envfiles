@@ -52,9 +52,6 @@
 [submodule "vim/bundle/vim-repeat"]
 	path = vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "vim/bundle/vim-matchit"]
-	path = vim/bundle/vim-matchit
-	url = https://github.com/mirell/vim-matchit.git
 [submodule "vim/bundle/vim-markdown"]
 	path = vim/bundle/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
@@ -97,3 +94,6 @@
 [submodule "vim/bundle/vim-preview"]
 	path = vim/bundle/vim-preview
 	url = https://github.com/greyblake/vim-preview.git
+[submodule "vim/bundle/vim-matchit"]
+	path = vim/bundle/vim-matchit
+	url = git://github.com/tsaleh/vim-matchit.git
