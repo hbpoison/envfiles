@@ -41,3 +41,26 @@ export EDITOR=/usr/local/bin/vim
 alias mongodb-up="mongod run --config /usr/local/etc/mongod.conf"
 alias redis-up="redis-server /usr/local/etc/redis.conf"
 
+## irssi stuff
+# create the pane with irssi's nicklist
+function irssi_nickpane() {
+  tmux renamew irssi
+  tmux -q setw main-pane-width $(( $(tput cols) - 21))
+  tmux splitw -v "cat ~/.irssi/nicklistfifo"
+  tmux -q selectl main-vertical
+  tmux selectw -t irssi
+  tmux selectp -t 1
+}
+# irssi wrapper
+function irssi() {
+  irssi_nickpane
+  /usr/bin/env irssi
+}
+# repair running irssi's nicklist pane
+function irssi_repair() {
+  tmux selectw -t irssi
+  tmux selectp -t 0
+  tmux killp -a
+  irssi_nickpane
+}
+##

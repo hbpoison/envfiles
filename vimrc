@@ -185,9 +185,15 @@ if executable("ack")
 endif
 
 " Color scheme
-colorscheme ir_black
-highlight NonText guibg=#060606
-highlight Folded  guibg=#0A0A0A guifg=#9090D0
+"colorscheme ir_black
+"highlight NonText guibg=#060606
+"highlight Folded  guibg=#0A0A0A guifg=#9090D0
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+colorscheme solarized
 
 " Numbers
 set number
